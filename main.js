@@ -10,17 +10,18 @@ window.addEventListener('load', ()=>{
         }
         e.target.value = str;
     }
-    document.getElementById('code').addEventListener('input', checkForm)
-    document.getElementById('code').addEventListener('compositionstart', e => {
+    document.getElementById('code-2').addEventListener('input', checkForm)
+    document.getElementById('code-1').addEventListener('input', checkForm)
+    document.getElementById('code-1').addEventListener('compositionstart', e => {
         console.log(e);
         console.log("compositionstart");
         flag = true
     })
-    document.getElementById('code').addEventListener('compositionupdate', e => {
+    document.getElementById('code-1').addEventListener('compositionupdate', e => {
         console.log(e);
         console.log("compositionupdate");
     })
-    document.getElementById('code').addEventListener('compositionend', e => {
+    document.getElementById('code-1').addEventListener('compositionend', e => {
         console.log(e);
         console.log("compositionend");
         flag = false
